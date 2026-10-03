@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>산업용 이동식에어컨 | 2027 정부지원 70% · 자부담 36만원부터 - 주영산업</title>
-<meta name="description" content="웰템 WPC-4900P~WPC-9000 산업용 이동식에어컨. 220V 플러그만 꽂으면 끝, 전기·배관공사 없습니다. 2027 클린사업 보조금 70% 적용 시 자부담 369,000원부터. 사업장당 최대 5대. 신청서류 전액 대행." />
+<meta name="description" content="웰템 WPC-4900P~WPC-9000 산업용 이동식에어컨. 220V 플러그만 꽂으면 끝, 전기·배관공사 없습니다. 2027 클린사업 보조금 70% 적용 시 자부담 369,000원부터. 상시근로자 1명당 1대, 사업장당 최대 5대. 신청서류 전액 대행." />
 <meta property="og:title" content="산업용 이동식에어컨 · 2027 정부지원 70%" />
 <meta property="og:description" content="220V 플러그인, 설치공사 없음. 자부담 36만원부터. 신청 대행 무료." />
 <meta property="og:image" content="images/hero.jpg" />
@@ -74,7 +74,9 @@ const CFG = {
     ["보조금은 어떻게 받나요?",
      "<b>2027 안전보건공단 클린사업</b>으로 진행합니다. 공단 인정가의 <b>70%</b>를 정부가 지원하고 차액만 부담하시면 됩니다. <b>사업자등록증 1장만 보내주시면</b> 신청 가능 여부와 예상 자부담금을 무료로 검토해 드리고, 신청서류 작성·접수까지 전부 대행합니다."],
     ["몇 대까지 신청할 수 있나요?",
-     "사업장당 <b>최대 5대</b>까지 신청 가능합니다. 단 <b>2026년에 이미 지원받은 대수는 제외</b>하고 신청하셔야 합니다.<br>" +
+     "신청 수량은 <b>상시근로자 1명당 1대</b>로 산정되며, 사업장당 <b>최대 5대</b>까지 가능합니다.<br>" +
+     "· 근로자 <b>2명</b> → <b>2대</b> / 근로자 <b>5명</b> → <b>5대</b> / 근로자 <b>10명</b> → <b>5대</b>(한도)<br>" +
+     "여기에 더해 <b>2026년에 이미 지원받은 대수는 제외</b>하고 신청하셔야 합니다.<br>" +
      "· 2026년 <b>3대</b> 지원받으셨다면 → <b>2대</b>만 신청 가능<br>" +
      "· 2026년 <b>5대</b> 지원받으셨다면 → <b>신청 불가</b><br>" +
      "· <b>2025년</b>에 5대를 지원받으셨다면 → <b>5대 모두 신청 가능</b> (차감되지 않습니다)<br>" +
@@ -148,11 +150,34 @@ h2 em{font-style:normal;color:var(--or)}
 @media(max-width:560px){.topbar .lg{font-size:14px}.tb-btn{padding:8px 12px;font-size:12.5px}}
 
 /* 히어로 */
-.hero{position:relative;background:#06101e;color:#fff;overflow:hidden;padding:98px 0 58px}
-.hero .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26}
+.hero{position:relative;background:linear-gradient(180deg,#16365c,#0c2240);color:#fff;
+  overflow:hidden;padding:92px 0 54px}
+.hero .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
 .hero::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(900px 520px at 16% 26%,rgba(10,132,255,.26),transparent 62%),
-             linear-gradient(180deg,rgba(6,16,30,.82),rgba(6,16,30,.96))}
+  background:radial-gradient(900px 520px at 16% 26%,rgba(10,132,255,.2),transparent 62%),
+             linear-gradient(180deg,rgba(11,30,56,.5),rgba(9,24,46,.84))}
+/* 히어로 2단: 좌 카피 / 우 제품 4종 */
+.h-in{display:grid;grid-template-columns:1.06fr .94fr;column-gap:38px;row-gap:26px;
+  align-items:center;grid-template-areas:"txt shots" "bot shots"}
+.h-txt{grid-area:txt}
+.h-bot{grid-area:bot}
+.h-shots{grid-area:shots;display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+@media(max-width:1000px){
+  .h-in{grid-template-columns:1fr;grid-template-areas:"txt" "shots" "bot";row-gap:24px}
+  .h-shots{grid-template-columns:repeat(4,1fr);gap:10px}
+}
+@media(max-width:700px){.h-shots{grid-template-columns:repeat(2,1fr);gap:11px}}
+.h-shots figure{position:relative;background:#fff;border-radius:17px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.6);box-shadow:0 14px 34px rgba(0,0,0,.34)}
+.h-shots figure.b{outline:2.5px solid var(--or);outline-offset:-2.5px}
+.h-shots .bg{position:absolute;right:0;top:0;z-index:2;background:var(--or);color:#fff;
+  font-size:10px;font-weight:900;letter-spacing:.08em;padding:4px 9px;border-bottom-left-radius:9px}
+.h-shots img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block;padding:9px 9px 0;background:#fff}
+.h-shots figcaption{padding:7px 10px 10px;text-align:center;background:#fff}
+.h-shots .nm{font-size:13.5px;font-weight:900;color:#0b1220;letter-spacing:-.04em;line-height:1.15}
+.h-shots .cp{font-size:11.5px;font-weight:800;color:#0a84ff;margin-top:2px}
+.h-shots .pz{font-size:11.5px;font-weight:800;color:#5a6676;margin-top:2px}
+.h-shots .pz b{color:#e8590c}
 .hero .wrap{position:relative;z-index:2}
 .h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(10,132,255,.2);
   border:1px solid rgba(77,178,255,.5);color:#9fd2ff;font-size:13px;font-weight:800;
@@ -162,7 +187,7 @@ h2 em{font-style:normal;color:var(--or)}
 .hero h1 em{font-style:normal;color:var(--or2);text-shadow:0 2px 24px rgba(10,132,255,.5)}
 .hero .sub{margin-top:18px;font-size:clamp(15px,2.4vw,17.5px);color:#c3d0e0;max-width:620px;line-height:1.72}
 .hero .sub b{color:#fff}
-.h-money{margin-top:26px;display:inline-flex;flex-direction:column;gap:2px;
+.h-money{margin-top:4px;display:inline-flex;flex-direction:column;gap:2px;
   background:linear-gradient(135deg,rgba(10,132,255,.18),rgba(10,132,255,.04));
   border:1px solid rgba(77,178,255,.42);border-radius:18px;padding:16px 24px}
 .h-money .k{font-size:13px;font-weight:700;color:#9fd2ff;letter-spacing:.04em}
@@ -196,7 +221,7 @@ h2 em{font-style:normal;color:var(--or)}
 
 /* 모델 라인업 */
 .lineup{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media(max-width:980px){.lineup{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1060px){.lineup{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:470px){.lineup{grid-template-columns:1fr}}
 .lc{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;
   padding:0 0 20px;box-shadow:var(--sh);display:flex;flex-direction:column;
@@ -205,9 +230,9 @@ h2 em{font-style:normal;color:var(--or)}
 .lc.best{border:2px solid var(--or)}
 .lc .bst{position:absolute;right:0;top:0;background:var(--or);color:#fff;font-size:11px;
   font-weight:900;letter-spacing:.08em;padding:6px 12px;border-bottom-left-radius:10px;z-index:2}
-.lc .ph{aspect-ratio:1/1;background:#f6f9fc;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.lc .ph{aspect-ratio:1/1.08;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
 .lc .ph img{width:100%;height:100%}
-.lc .ph img.contain{object-fit:contain;padding:8px}
+.lc .ph img.contain{object-fit:contain;padding:4px}
 .lc .ph img.cover{object-fit:cover}
 .lc .bd{padding:18px 18px 0;display:flex;flex-direction:column;flex:1}
 .lc .mm{font-size:22px;font-weight:900;letter-spacing:-.045em;color:var(--ink);line-height:1.1}
@@ -284,7 +309,7 @@ h2 em{font-style:normal;color:var(--or)}
 .ptab tr.best{background:#f5fbff}
 .ptab td.mm{font-weight:900;color:var(--or);font-size:14.5px}
 .ptab td.pr{font-weight:900;color:var(--ink)}
-.ptab td.gv{font-weight:900;color:var(--gr)}
+.ptab td.gov{font-weight:900;color:var(--gr)}
 .ptab td.sf{font-weight:900;color:var(--or)}
 .ptab td.sm{font-size:13px;color:var(--mute);font-weight:600}
 .ptab th.rh{background:#f8fafc;text-align:left;padding-left:16px;font-size:12.5px;color:#38404c;position:sticky;left:0}
@@ -473,13 +498,18 @@ footer a{color:#c9d1dc}
 <!-- ================= HERO ================= -->
 <header class="hero">
   <img class="hbg" src="images/hero.jpg" alt="" aria-hidden="true" />
-  <div class="wrap">
+  <div class="wrap h-in">
+   <div class="h-txt">
     <div class="h-badge"><b>2027 클린사업</b> 지원품목 · 신청서류 전액 대행</div>
     <h1>공장이 더워서<br>사람이 <em>안 버팁니다</em></h1>
     <p class="sub">실외기도, 벽 타공도, 배관공사도 없습니다.<br>
-      <b>220V 콘센트에 플러그만 꽂으면</b> 작업자 바로 앞이 시원해집니다.
+      <b>220V 콘센트에 플러그만 꽂으면</b> 작업자 바로 앞이 시원해집니다.<br>
       <b>정부지원 70%</b>로 들여놓으세요.</p>
+   </div>
 
+   <div class="h-shots" id="heroShots"></div>
+
+   <div class="h-bot">
     <div class="h-money">
       <div class="k">정부지원 70% 적용 시 자부담</div>
       <div class="v">369,000원<small>부터</small></div>
@@ -494,10 +524,11 @@ footer a{color:#c9d1dc}
     <div class="h-chips">
       <span class="chip">설치공사 <b>없음</b></span>
       <span class="chip">정부지원 <b>70%</b></span>
-      <span class="chip">사업장당 최대 <b>5대</b></span>
+      <span class="chip">근로자 <b>1명당 1대</b> · 최대 <b>5대</b></span>
       <span class="chip">사업자등록증 <b>1장</b>이면 조회</span>
       <span class="chip">신청 · 서류 <b>전액 대행</b></span>
     </div>
+   </div>
   </div>
 </header>
 
@@ -505,7 +536,7 @@ footer a{color:#c9d1dc}
   <div class="c"><div class="n">자부담 36.9만원~</div><div class="l">정부지원 70% 적용 시</div></div>
   <div class="c"><div class="n">220V 플러그인</div><div class="l">전기·배관공사 ZERO</div></div>
   <div class="c"><div class="n">4,700 ~ 10,600W</div><div class="l">4가지 모델 냉방능력</div></div>
-  <div class="c"><div class="n">최대 5대</div><div class="l">사업장당 신청 한도</div></div>
+  <div class="c"><div class="n">근로자 1명당 1대</div><div class="l">사업장당 최대 5대 한도</div></div>
 </div></div>
 
 <!-- ================= 모델 라인업 ================= -->
@@ -519,7 +550,7 @@ footer a{color:#c9d1dc}
     <div class="lineup fadein" id="lineGrid"></div>
     <div class="cnote" style="color:var(--mute);margin-top:20px">
       ※ <b style="color:var(--rd)">WPC-1700은 지원 대상에서 제외</b>되어 안내하지 않습니다.
-      위 4개 모델만 신청이 가능하며, <b style="color:var(--ink)">사업장당 최대 5대</b>까지 신청하실 수 있습니다.
+      위 4개 모델만 신청이 가능하며, 수량은 <b style="color:var(--ink)">상시근로자 1명당 1대</b> 기준으로 <b style="color:var(--ink)">사업장당 최대 5대</b>까지 신청하실 수 있습니다.
     </div>
   </div>
 </section>
@@ -541,7 +572,7 @@ footer a{color:#c9d1dc}
       </div>
 
       <div class="cfield">
-        <div class="lb"><span>필요 수량 (최대 5대)</span><b id="qVal">1대</b></div>
+        <div class="lb"><span>필요 수량 (근로자 1명당 1대 · 최대 5대)</span><b id="qVal">1대</b></div>
         <input type="range" id="qRange" min="1" max="5" step="1" value="1" />
       </div>
 
@@ -553,8 +584,9 @@ footer a{color:#c9d1dc}
       </div>
 
       <div class="cnote">※ 보조금은 <b style="color:#fff">공단 인정가 × 70%</b> 기준입니다.
-        신청 한도는 <b style="color:#fff">사업장당 최대 5대</b>이며,
-        <b style="color:#fff">2026년에 이미 지원받은 대수는 제외</b>하고 신청하셔야 합니다.<br>
+        신청 수량은 <b style="color:#fff">상시근로자 1명당 1대</b>(근로자 3명 → 3대)로 산정되며
+        <b style="color:#fff">사업장당 최대 5대</b>까지 가능합니다.
+        여기에서 <b style="color:#fff">2026년에 이미 지원받은 대수는 제외</b>하고 신청하셔야 합니다.<br>
         실제 지원율·한도는 사업 공고와 심사 결과에 따라 달라지므로 <b style="color:#fff">무료 조회로 확인</b>해 드립니다.</div>
 
       <a class="btn btn-pri btn-lg" href="#apply" data-cta="calc" style="margin-top:20px">이 조건으로 지원금 조회하기</a>
@@ -583,7 +615,8 @@ footer a{color:#c9d1dc}
       <div class="t">⚠ 신청 전 반드시 확인해 주세요</div>
       <ul>
         <li><b>WPC-1700은 지원불가</b>입니다. WPC-4900P / 5900P / 6900P / 9000 만 신청 가능합니다.</li>
-        <li><b>사업장당 최대 5대</b>까지 신청 가능하며, <b>2026년에 지원받은 대수는 제외</b>하고 신청해야 합니다. (2025년 지원분은 차감되지 않습니다)</li>
+        <li>신청 수량은 <b>상시근로자 1명당 1대</b> 기준이며 <b>사업장당 최대 5대</b>까지 가능합니다. (근로자 2명 → 2대 / 근로자 7명 → 5대)</li>
+        <li><b>2026년에 지원받은 대수는 제외</b>하고 신청해야 합니다. (2025년 지원분은 차감되지 않습니다)</li>
         <li><b>WPC-9000은 설치비 100,000원이 별도</b>로 발생합니다 (나머지 모델은 플러그인으로 설치비 없음).</li>
         <li>모든 금액은 <b>공급가액 기준이며 부가세는 별도</b>입니다.</li>
         <li>보조금은 <b>공단 인정가 기준</b>으로 산정되며, 지원율·한도는 심사 결과에 따라 달라질 수 있습니다.</li>
@@ -656,14 +689,17 @@ footer a{color:#c9d1dc}
       </div>
       <div class="gv-c">
         <div class="k">LIMIT · 신청 한도</div>
-        <h4>사업장당 최대 5대</h4>
-        <div class="s">2026년에 지원받은 대수는 제외하고 신청</div>
+        <h4>근로자 1명당 1대 · 최대 5대</h4>
+        <div class="s">상시근로자 수만큼 신청 — 단 2026년 지원분은 차감</div>
         <dl>
-          <dt>최대 수량</dt><dd class="hi">5대</dd>
+          <dt>산정 기준</dt><dd class="hi">상시근로자 1명당 1대</dd>
+          <dt>최대 수량</dt><dd class="hi">사업장당 5대</dd>
           <dt>차감 기준</dt><dd>2026년 지원분</dd>
           <dt>2025년 지원분</dt><dd>차감 없음</dd>
         </dl>
         <div class="exbox">
+          <div class="ex">근로자 <b>2명</b> → <b class="g">2대</b> 신청 가능</div>
+          <div class="ex">근로자 <b>7명</b> → <b class="g">5대</b> (최대 한도)</div>
           <div class="ex">2026년 <b>3대</b> 지원 → <b class="g">2대</b> 신청 가능</div>
           <div class="ex">2026년 <b>5대</b> 지원 → <b class="r">신청 불가</b></div>
           <div class="ex">2025년 <b>5대</b> 지원 → <b class="g">5대</b> 신청 가능</div>
@@ -738,7 +774,7 @@ footer a{color:#c9d1dc}
 
           <div class="g2">
             <div class="fgrp">
-              <label class="lb">필요 수량 <span class="hint">최대 5대</span></label>
+              <label class="lb">필요 수량 <span class="hint">근로자 1명당 1대 · 최대 5대</span></label>
               <input type="number" name="qty" inputmode="numeric" min="1" max="5" placeholder="예) 2" />
             </div>
             <div class="fgrp">
@@ -754,8 +790,9 @@ footer a{color:#c9d1dc}
             </div>
           </div>
           <div class="fhelp" style="margin-top:-10px;margin-bottom:20px">
-            ※ 사업장당 <b>최대 5대</b>까지 신청 가능하며,
-            <b>2026년에 지원받은 대수는 제외</b>하고 신청하셔야 합니다.
+            ※ 신청 수량은 <b>상시근로자 1명당 1대</b> 기준이며 <b>사업장당 최대 5대</b>까지 가능합니다.
+            (근로자 2명 → 2대 / 근로자 7명 → 5대)<br>
+            ※ 여기에서 <b>2026년에 지원받은 대수는 제외</b>하고 신청하셔야 합니다.
             (2025년에 받으신 것은 차감되지 않습니다)
           </div>
 
@@ -790,12 +827,10 @@ footer a{color:#c9d1dc}
               <input type="tel" name="phone" inputmode="numeric" placeholder="010-1234-5678" required />
             </div>
             <div class="fgrp">
-              <label class="lb">상시근로자 수</label>
-              <select name="headcount">
-                <option value="">선택해 주세요</option>
-                <option>5인 미만</option><option>5 ~ 9인</option>
-                <option>10 ~ 29인</option><option>30 ~ 49인</option><option>50인 이상</option>
-              </select>
+              <label class="lb">상시근로자 수<span class="req">*</span>
+                <span class="hint">1명당 1대 산정</span></label>
+              <input type="number" name="headcount" inputmode="numeric" min="1" max="999"
+                     placeholder="예) 3" required />
             </div>
           </div>
 
@@ -832,7 +867,7 @@ footer a{color:#c9d1dc}
       ※ 모든 금액은 공급가액 기준이며 부가세는 별도입니다. 세금계산서는 의무 발행됩니다.<br>
       ※ 보조금은 공단 인정가 기준으로 산정되며, 지원 대상·비율·한도는 각 사업 공고 및 심사 결과에 따라 달라질 수 있습니다.<br>
       ※ WPC-1700은 지원 대상에서 제외되었습니다. WPC-9000은 설치비 100,000원이 별도입니다.<br>
-      ※ 신청 한도는 사업장당 최대 5대이며, 2026년에 지원받은 대수는 제외하고 신청해야 합니다.
+      ※ 신청 수량은 상시근로자 1명당 1대 기준이며 사업장당 최대 5대입니다. 2026년에 지원받은 대수는 제외하고 신청해야 합니다.
     </div>
   </div>
 </footer>
@@ -860,6 +895,19 @@ footer a{color:#c9d1dc}
     CFG.bizName + ' · 담당 ' + CFG.contact + '<br>' +
     '상담문의 <a href="'+tel+'"><b>'+CFG.phone+'</b></a> (24시간 통화 가능)<br>' +
     '&copy; ' + new Date().getFullYear() + ' ' + CFG.brand + '. All rights reserved.';
+
+  /* ---- 히어로 제품 4종 ---- */
+  const hs = $('#heroShots');
+  if(hs) hs.innerHTML = CFG.models.map(m=>`
+    <figure class="${m.best?'b':''}">
+      ${m.best?'<span class="bg">BEST</span>':''}
+      <img src="images/${m.img}" alt="웰템 ${m.key} 산업용 이동식에어컨" fetchpriority="high">
+      <figcaption>
+        <div class="nm">${m.key}</div>
+        <div class="cp">${m.cool} · ${m.area}</div>
+        <div class="pz">자부담 <b>${m.self.toLocaleString('ko-KR')}원</b></div>
+      </figcaption>
+    </figure>`).join('');
 
   /* ---- 모델 라인업 ---- */
   $('#lineGrid').innerHTML = CFG.models.map(m=>`
@@ -896,7 +944,7 @@ footer a{color:#c9d1dc}
       <td class="sm">${m.cool}</td>
       <td class="sm">${m.area}</td>
       <td class="pr">${m.price.toLocaleString('ko-KR')}원</td>
-      <td class="gv">${m.gov.toLocaleString('ko-KR')}원</td>
+      <td class="gov">${m.gov.toLocaleString('ko-KR')}원</td>
       <td class="sf">${m.self.toLocaleString('ko-KR')}원${m.install?'<br><small style="color:#e03131;font-size:11px">+설치비 10만</small>':''}</td>
     </tr>`).join('');
 
@@ -1046,9 +1094,21 @@ footer a{color:#c9d1dc}
     else if(x.length>5)         x=x.replace(/(\d{3})(\d{2})(\d+)/,'$1-$2-$3');
     e.target.value=x;
   });
-  form.qty.addEventListener('input',e=>{
-    if(+e.target.value > 5) e.target.value = 5;
-  });
+  function qCap(){
+    const w = parseInt(form.headcount.value,10);
+    return (w>0) ? Math.min(w,5) : 5;
+  }
+  function clampQty(){
+    const cap = qCap(), hint = form.qty.closest('.fgrp').querySelector('.hint');
+    form.qty.max = cap;
+    if(+form.qty.value > cap) form.qty.value = cap;
+    const w = parseInt(form.headcount.value,10);
+    if(hint) hint.textContent = (w>0)
+      ? `근로자 ${w}명 → 최대 ${cap}대`
+      : '근로자 1명당 1대 · 최대 5대';
+  }
+  form.qty.addEventListener('input',clampQty);
+  form.headcount.addEventListener('input',clampQty);
   function show(t,k){ msg.textContent=t; msg.className='msg '+k;
     msg.scrollIntoView({behavior:'smooth',block:'center'}); }
 
@@ -1063,6 +1123,10 @@ footer a{color:#c9d1dc}
     if(form.bizno.value.replace(/[^0-9]/g,'').length !== 10)
                                    return show('사업자등록번호 10자리를 정확히 입력해 주세요. (업종코드 조회용)','err');
     if(!form.prev26.value)         return show('2026년에 지원받은 이동식에어컨 대수를 선택해 주세요.','err');
+    const wk = parseInt(form.headcount.value,10);
+    if(!(wk>0))                    return show('상시근로자 수를 입력해 주세요. (신청 수량은 근로자 1명당 1대로 산정됩니다)','err');
+    if(form.qty.value && +form.qty.value > Math.min(wk,5))
+                                   return show('신청 수량은 상시근로자 1명당 1대 기준입니다. 근로자 '+wk+'명이면 최대 '+Math.min(wk,5)+'대까지 신청 가능합니다.','err');
     const em = form.email.value.trim();
     if(em && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))
                                    return show('이메일 주소를 정확히 입력해 주세요.','err');
