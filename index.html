@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>산업용 이동식에어컨 | 정부지원 70% · 자부담 36만원부터 - 주영산업</title>
+<meta name="description" content="웰템 WPC-4900P~WPC-9000 산업용 이동식에어컨. 220V 플러그만 꽂으면 끝, 전기·배관공사 없습니다. 2026 클린사업 보조금 70% 적용 시 자부담 369,000원부터. 신청서류 전액 대행." />
+<meta property="og:title" content="산업용 이동식에어컨 · 정부지원 70%" />
+<meta property="og:description" content="220V 플러그인, 설치공사 없음. 자부담 36만원부터. 신청 대행 무료." />
+<meta property="og:image" content="images/hero.jpg" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+
+<!-- ====================================================================== -->
+<!--  [1] 페이지 설정                                                         -->
+<!-- ====================================================================== -->
+<script>
+const CFG = {
+  brand:   "주영산업",
+  bizName: "주식회사 도미넌트 (주영산업)",
+  phone:   "010-3456-2185",
+  contact: "이수오 팀장",
+  year:    "2026",
+
+  // 2026년 지원 가능 모델 (WPC-1700 은 2026년 지원불가 → 제외)
+  models: [
+    { key:"WPC-4900P", img:"wpc4900.jpg", fit:"contain", ducts:"2구 (기본형)",
+      cool:"4,700W", watt:"2.3kW", amp:"11.0A", area:"50㎡ (약 15평)",
+      grade:"5등급", tank:"18L", weight:"89kg", size:"523 × 670 × 1,042mm",
+      price:1228000, gov:859000, self:369000, install:0,
+      tagline:"소규모 작업장 · 1~2인 국부냉방",
+      good:["가장 가벼운 89kg · 혼자서도 이동","소비전력 2.3kW로 전기요금 부담 최소"],
+      use:["소규모 공장·창고 작업대 주변","용접·연마 등 1~2인 고정 작업구역"] },
+
+    { key:"WPC-5900P", img:"wpc5900.jpg", fit:"contain", ducts:"3구 (중형)",
+      cool:"6,500W", watt:"2.5kW", amp:"11.39A", area:"62㎡ (약 19평)",
+      grade:"4등급", tank:"18L", weight:"94kg", size:"562 × 750 × 1,200mm",
+      price:1488000, gov:1041000, self:447000, install:0,
+      tagline:"토출구 3개 · 여러 명 동시 냉방",
+      good:["토출구 3구로 작업자 여러 명 동시 커버","6,500W 냉방능력 대비 소비전력 2.5kW"],
+      use:["중형 생산라인, 포장·검사 구역","작업자 2~4명이 모여 있는 공정"] },
+
+    { key:"WPC-6900P", img:"wpc6900.jpg", fit:"contain", ducts:"3구 (대형)", best:true,
+      cool:"7,100W", watt:"2.93kW", amp:"13.41A", area:"66㎡ (약 20평)",
+      grade:"5등급", tank:"18L", weight:"102kg", size:"562 × 766 × 1,269mm",
+      price:1713000, gov:1199000, self:514000, install:0,
+      tagline:"가장 많이 선택하는 주력 모델",
+      good:["7,100W 고출력 + 에너지효율 5등급","현장에서 가장 만족도 높은 체감 냉방"],
+      use:["일반 제조공장 작업장 전반","열원(용광로·프레스) 인접 구역"] },
+
+    { key:"WPC-9000", img:"wpc9000.jpg", fit:"cover", ducts:"대형 터미널형",
+      cool:"10,600W", watt:"4.9kW", amp:"-", area:"100㎡ (약 30평)",
+      grade:"5등급", tank:"상시배수", weight:"-", size:"-",
+      price:2559000, gov:1791000, self:768000, install:100000,
+      tagline:"최대 출력 · 넓은 구역 통째로",
+      good:["10,600W 최대 냉방능력, 30평까지 커버","넓은 구역을 1대로 해결 (설치비 별도)"],
+      use:["대형 공장·물류센터 작업구역","여러 공정이 모인 넓은 개방 공간"] }
+  ],
+
+  merits: [
+    ["🔌","전기·배관공사 ZERO","220V 콘센트(돼지코)에 플러그만 꽂으면 바로 가동합니다. 실외기 설치, 벽 타공, 배관공사가 전혀 필요 없습니다.","220V 60Hz 플러그타입"],
+    ["🛞","바퀴로 밀어서 이동","하부 캐스터가 달려 있어 작업 위치가 바뀌면 그대로 밀어서 옮깁니다. 라인 변경·계절 보관이 자유롭습니다.","전·후 캐스터 기본"],
+    ["🎯","작업자를 직접 냉방","토출구가 사람을 향합니다. 공장 전체를 식히는 게 아니라 작업자 체감온도를 직접 떨어뜨리는 국부냉방 방식입니다.","토출구 2~3구"],
+    ["💧","응축수 18L 대용량","대용량 응축수통으로 물 비우는 주기가 깁니다. 배수호스를 연결하면 상시배수로 무인 운전도 가능합니다.","호스 상시배수 가능"],
+    ["🌿","친환경 R-410A 냉매","오존층을 파괴하지 않는 R-410A 냉매를 사용합니다. 고효율 로터리 컴프레서로 소비전력을 낮췄습니다.","에너지효율 4~5등급"],
+    ["🫧","고성능 다중 필터","분진이 많은 산업 현장을 고려한 필터 구조로, 냉방과 동시에 작업장 공기질을 함께 관리합니다.","세척·교체형 필터"]
+  ],
+
+  faq: [
+    ["전기공사나 배관공사를 해야 하나요?",
+     "아닙니다. <b>220V 일반 콘센트(돼지코)에 플러그만 꽂으면 바로 가동</b>합니다. 실외기 설치·벽 타공·냉매배관 공사가 전혀 없습니다. 이동식에어컨을 선택하는 가장 큰 이유입니다. (WPC-9000 대형 터미널형만 설치비 100,000원이 별도입니다.)"],
+    ["보조금은 어떻게 받나요?",
+     "<b>2026 안전보건공단 클린사업</b>으로 진행합니다. 공단 인정가의 <b>70%</b>(소상공인·우대 대상은 80~90%)를 정부가 지원하고 차액만 부담하시면 됩니다. <b>사업자등록증 1장만 보내주시면</b> 신청 가능 여부와 예상 자부담금을 무료로 검토해 드리고, 신청서류 작성·접수까지 전부 대행합니다."],
+    ["응축수(물)는 어떻게 처리하나요?",
+     "<b>18L 대용량 응축수통</b>이 내장되어 있어 가득 차면 비워 주시면 됩니다. 배수구가 가까운 현장이라면 <b>배수호스를 연결해 상시배수</b>로 쓰실 수 있고, 이 경우 물을 비울 필요가 없어 무인 연속운전이 가능합니다."],
+    ["어떤 모델을 골라야 하나요?",
+     "<b>냉방이 필요한 구역 면적</b>이 기준입니다. 15평 내외·작업자 1~2명이면 WPC-4900P, 19~20평·여러 명이면 WPC-5900P / <b>WPC-6900P(가장 많이 선택)</b>, 30평 넓은 구역을 1대로 해결하려면 WPC-9000 입니다. 위 계산기로 자부담금을 먼저 비교해 보시고, 애매하면 전화 주시면 현장 조건을 듣고 정해 드립니다."],
+    ["실외기가 없는데 진짜 시원한가요?",
+     "공장 전체 온도를 내리는 장비가 아니라 <b>작업자 쪽으로 찬 바람을 집중시키는 국부냉방 장비</b>입니다. 토출구를 사람 쪽으로 향하게 두면 체감온도가 바로 떨어집니다. 반대로 넓은 공간의 실내 온도 자체를 낮추는 용도로는 적합하지 않습니다."],
+    ["WPC-1700은 신청이 안 되나요?",
+     "네. <b>WPC-1700은 2026년 지원 대상에서 제외</b>되었습니다. 2026년에는 <b>WPC-4900P · WPC-5900P · WPC-6900P · WPC-9000</b> 네 가지 모델만 보조금 신청이 가능합니다."],
+    ["납기와 설치는 어떻게 되나요?",
+     "공단 승인 이후 <b>재고 상황에 따라 통상 1~2주 내 납품</b>됩니다. 플러그인 제품이므로 현장에 내려놓고 콘센트에 꽂는 것으로 설치가 끝나며, 사용법 안내도 함께 드립니다. 다수 대량 발주 시 납기는 별도 협의합니다."],
+    ["금액은 부가세 포함인가요?",
+     "위 표의 판매가·보조금·자부담금은 모두 <b>공급가액 기준이며 부가세는 별도</b>입니다. 세금계산서는 의무 발행됩니다. 보조금은 공단 인정가 기준으로 산정되며, 심사 결과에 따라 달라질 수 있습니다."]
+  ]
+};
+
+// 리드 수신 엔드포인트 — 구글시트 "구글애즈광고" 컨테이너 바운드 Apps Script
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbx_gXSZ2MzMYIs6xzHOFOAl4agttM1tLvK6_G0Xpih4n8sKSltZ-GsDwc5i1RD2N5v9GQ/exec";
+
+// 광고 추적
+const TRACK = { metaPixel:"1007851345549014", googleAdsId:"AW-18312813955",
+                gadsConversionLabel:"", ga4Id:"" };
+</script>
+
+<style>
+:root{
+  --ink:#0b1220; --mute:#6b7684; --line:#e4e9f0;
+  --or:#0a84ff; --or2:#4db2ff; --or-dk:#0059b8;
+  --bl:#1769e0; --gr:#13a06a; --rd:#e03131;
+  --bg:#ffffff; --bg2:#f4f7fb;
+  --max:1120px; --r:16px;
+  --sh:0 6px 24px rgba(11,18,32,.08);
+  --sh2:0 14px 48px rgba(11,18,32,.14);
+  --tint:#eaf4ff;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Malgun Gothic",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.62;-webkit-font-smoothing:antialiased;
+  font-size:16px;letter-spacing:-.015em;overflow-x:hidden;padding-bottom:70px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:66px 0}
+.sec-head{text-align:center;margin-bottom:36px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;
+  color:var(--or-dk);background:var(--tint);border-radius:999px;padding:6px 14px;margin-bottom:14px}
+h2{font-size:clamp(23px,4.6vw,34px);font-weight:800;line-height:1.3;letter-spacing:-.03em}
+h2 em{font-style:normal;color:var(--or)}
+.sec-head p{margin-top:12px;color:var(--mute);font-size:15.5px}
+
+/* 상단바 */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.93);
+  backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);
+  transform:translateY(-100%);transition:transform .28s}
+.topbar.show{transform:none}
+.topbar .in{max-width:var(--max);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
+.topbar .lg{font-weight:900;font-size:16px;letter-spacing:-.04em}
+.topbar .lg span{color:var(--or)}
+.topbar .sp{flex:1}
+.tb-btn{font-size:13.5px;font-weight:800;padding:9px 16px;border-radius:10px;white-space:nowrap}
+.tb-btn.g{background:var(--ink);color:#fff}
+.tb-btn.o{background:var(--or);color:#fff}
+@media(max-width:560px){.topbar .lg{font-size:14px}.tb-btn{padding:8px 12px;font-size:12.5px}}
+
+/* 히어로 */
+.hero{position:relative;background:#06101e;color:#fff;overflow:hidden;padding:98px 0 58px}
+.hero .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26}
+.hero::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(900px 520px at 16% 26%,rgba(10,132,255,.26),transparent 62%),
+             linear-gradient(180deg,rgba(6,16,30,.82),rgba(6,16,30,.96))}
+.hero .wrap{position:relative;z-index:2}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(10,132,255,.2);
+  border:1px solid rgba(77,178,255,.5);color:#9fd2ff;font-size:13px;font-weight:800;
+  padding:7px 15px;border-radius:999px;margin-bottom:18px}
+.h-badge b{color:#fff}
+.hero h1{font-size:clamp(31px,6.6vw,54px);font-weight:900;line-height:1.17;letter-spacing:-.045em}
+.hero h1 em{font-style:normal;color:var(--or2);text-shadow:0 2px 24px rgba(10,132,255,.5)}
+.hero .sub{margin-top:18px;font-size:clamp(15px,2.4vw,17.5px);color:#c3d0e0;max-width:620px;line-height:1.72}
+.hero .sub b{color:#fff}
+.h-money{margin-top:26px;display:inline-flex;flex-direction:column;gap:2px;
+  background:linear-gradient(135deg,rgba(10,132,255,.18),rgba(10,132,255,.04));
+  border:1px solid rgba(77,178,255,.42);border-radius:18px;padding:16px 24px}
+.h-money .k{font-size:13px;font-weight:700;color:#9fd2ff;letter-spacing:.04em}
+.h-money .v{font-size:clamp(27px,5.4vw,40px);font-weight:900;letter-spacing:-.04em;line-height:1.15}
+.h-money .v small{font-size:.42em;font-weight:800;color:#c3d0e0;margin-left:6px}
+.h-money .x{font-size:12.5px;color:#8fa3bb;font-weight:600;margin-top:4px}
+.h-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:11px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-weight:800;font-size:16px;padding:16px 28px;border-radius:13px;border:0;cursor:pointer;
+  transition:transform .14s,box-shadow .14s,background .14s;letter-spacing:-.02em}
+.btn:active{transform:scale(.975)}
+.btn-pri{background:linear-gradient(135deg,var(--or),#3aa0ff);color:#fff;
+  box-shadow:0 8px 26px rgba(10,132,255,.42)}
+.btn-gho{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.34)}
+.btn-lg{width:100%;padding:19px;font-size:17.5px}
+.h-chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);
+  color:#d6e0ea;font-size:13px;font-weight:700;padding:7px 13px;border-radius:9px}
+.chip b{color:var(--or2)}
+
+/* 숫자 밴드 */
+.band{background:var(--ink);color:#fff}
+.band .in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.band .c{padding:24px 14px;text-align:center;border-left:1px solid rgba(255,255,255,.1)}
+.band .c:first-child{border-left:0}
+.band .n{font-size:clamp(17px,3.1vw,25px);font-weight:900;color:var(--or2);letter-spacing:-.03em}
+.band .l{font-size:12.5px;color:#9aa6b4;margin-top:3px;font-weight:600}
+@media(max-width:640px){.band .in{grid-template-columns:repeat(2,1fr)}
+  .band .c:nth-child(3),.band .c:nth-child(4){border-top:1px solid rgba(255,255,255,.1)}
+  .band .c:nth-child(3){border-left:0}}
+
+/* 모델 라인업 */
+.lineup{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:980px){.lineup{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:470px){.lineup{grid-template-columns:1fr}}
+.lc{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:0 0 20px;box-shadow:var(--sh);display:flex;flex-direction:column;
+  overflow:hidden;transition:transform .18s,box-shadow .18s}
+.lc:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.lc.best{border:2px solid var(--or)}
+.lc .bst{position:absolute;right:0;top:0;background:var(--or);color:#fff;font-size:11px;
+  font-weight:900;letter-spacing:.08em;padding:6px 12px;border-bottom-left-radius:10px;z-index:2}
+.lc .ph{aspect-ratio:1/1;background:#f6f9fc;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.lc .ph img{width:100%;height:100%}
+.lc .ph img.contain{object-fit:contain;padding:8px}
+.lc .ph img.cover{object-fit:cover}
+.lc .bd{padding:18px 18px 0;display:flex;flex-direction:column;flex:1}
+.lc .mm{font-size:22px;font-weight:900;letter-spacing:-.045em;color:var(--ink);line-height:1.1}
+.lc .ty{font-size:12.5px;font-weight:800;color:var(--or-dk);margin-top:5px}
+.lc .tl{display:inline-block;margin-top:9px;font-size:12.5px;font-weight:800;color:var(--or-dk);
+  background:var(--tint);border-radius:7px;padding:4px 9px;align-self:flex-start;line-height:1.4}
+.lc .kv{margin-top:13px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;
+  padding-top:12px;border-top:1px dashed var(--line)}
+.lc .kv dt{font-size:12px;color:var(--mute);font-weight:700}
+.lc .kv dd{font-size:12.8px;font-weight:800;text-align:right}
+.lc .money{margin-top:13px;background:#f6f9fc;border-radius:11px;padding:12px 13px}
+.lc .money .r{display:flex;justify-content:space-between;align-items:baseline;font-size:12.6px;
+  color:var(--mute);font-weight:700;margin-bottom:4px}
+.lc .money .r b{font-size:14px;color:#38404c;font-weight:800;letter-spacing:-.02em}
+.lc .money .r.st{color:var(--gr)}
+.lc .money .r.st b{color:var(--gr)}
+.lc .money .sf{margin-top:7px;padding-top:9px;border-top:1px solid #e2e9f1;
+  display:flex;justify-content:space-between;align-items:baseline}
+.lc .money .sf span{font-size:12.6px;font-weight:800;color:var(--ink)}
+.lc .money .sf b{font-size:20px;font-weight:900;color:var(--or);letter-spacing:-.04em}
+.lc .money .iv{font-size:11.5px;color:var(--rd);font-weight:700;margin-top:6px}
+.lc ul{list-style:none;margin-top:13px}
+.lc li{font-size:13px;color:#38404c;padding-left:17px;position:relative;margin-bottom:5px;font-weight:600;line-height:1.55}
+.lc li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--or)}
+.lc .us{margin-top:11px;background:#f8fafc;border-radius:10px;padding:11px 12px;font-size:12.4px;
+  color:#4a5462;font-weight:600;line-height:1.6}
+.lc .us b{display:block;font-size:11px;letter-spacing:.1em;color:var(--mute);margin-bottom:4px}
+.lc .pick{margin-top:auto;padding-top:14px}
+.lc .pick b{display:block;text-align:center;background:var(--tint);color:var(--or-dk);
+  border:1px dashed var(--or2);border-radius:10px;padding:10px;font-size:13.5px;font-weight:800;cursor:pointer}
+.imgnote{font-size:11px;color:var(--mute);text-align:center;padding:6px 10px 0;font-weight:600}
+
+/* 계산기 */
+.calc{background:var(--ink);color:#fff}
+.calc .sec-head h2{color:#fff}
+.calc .sec-head p{color:#9aa6b4}
+.calc .eyebrow{background:rgba(10,132,255,.18);color:#9fd2ff}
+.cbox{max-width:780px;margin:0 auto;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px}
+@media(max-width:520px){.cbox{padding:22px 18px}}
+.cfield{margin-bottom:20px}
+.cfield .lb{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:14px;color:#9aa6b4;font-weight:700;margin-bottom:9px}
+.cfield .lb b{font-size:20px;color:#fff;font-weight:900;letter-spacing:-.03em}
+.cfield input[type=range]{width:100%;accent-color:var(--or);height:6px}
+.mmsel{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(max-width:560px){.mmsel{grid-template-columns:repeat(2,1fr)}}
+.mmsel button{border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#c9d1dc;
+  border-radius:11px;padding:11px 4px;font-size:14px;font-weight:900;cursor:pointer;font-family:inherit;
+  letter-spacing:-.03em;transition:all .15s}
+.mmsel button small{display:block;font-size:10.5px;font-weight:700;color:#8b95a3;letter-spacing:0;margin-top:2px}
+.mmsel button.on{background:var(--or);border-color:var(--or);color:#fff}
+.mmsel button.on small{color:#d6ecff}
+.cout{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
+@media(max-width:520px){.cout{grid-template-columns:1fr}}
+.cout div{background:rgba(255,255,255,.05);border-radius:12px;padding:15px;text-align:center}
+.cout .k{font-size:12.5px;color:#9aa6b4;font-weight:700}
+.cout .v{font-size:clamp(19px,3.6vw,25px);font-weight:900;margin-top:3px;letter-spacing:-.035em}
+.cout .main{background:linear-gradient(135deg,rgba(10,132,255,.22),rgba(10,132,255,.07));
+  border:1px solid rgba(77,178,255,.42)}
+.cout .main .v{color:var(--or2)}
+.cout .gov{background:rgba(19,160,106,.14);border:1px solid rgba(19,160,106,.45)}
+.cout .gov .v{color:#4ddba0}
+.cnote{margin-top:16px;font-size:12.8px;color:#9aa6b4;text-align:center;line-height:1.75}
+
+/* 가격표 / 제원표 */
+.ptab{max-width:860px;margin:0 auto;border:1px solid var(--line);border-radius:16px;
+  overflow-x:auto;background:#fff;box-shadow:var(--sh)}
+.ptab table{width:100%;border-collapse:collapse;min-width:560px}
+.ptab th{font-size:12.5px;color:var(--mute);font-weight:800;padding:12px 8px;background:#f1f5fa;
+  border-bottom:1px solid var(--line);white-space:nowrap}
+.ptab td{font-size:14px;padding:13px 8px;text-align:center;border-bottom:1px solid #f0f3f7;font-weight:700;white-space:nowrap}
+.ptab tr:last-child td{border-bottom:0}
+.ptab tr.best{background:#f5fbff}
+.ptab td.mm{font-weight:900;color:var(--or);font-size:14.5px}
+.ptab td.pr{font-weight:900;color:var(--ink)}
+.ptab td.gv{font-weight:900;color:var(--gr)}
+.ptab td.sf{font-weight:900;color:var(--or)}
+.ptab td.sm{font-size:13px;color:var(--mute);font-weight:600}
+.ptab th.rh{background:#f8fafc;text-align:left;padding-left:16px;font-size:12.5px;color:#38404c;position:sticky;left:0}
+.ptab td.rv{font-size:13.4px}
+.warn{max-width:860px;margin:20px auto 0;background:#fff5f5;border:1px solid #f5c2c2;
+  border-radius:14px;padding:18px 22px}
+.warn .t{font-size:14.5px;font-weight:900;color:var(--rd);margin-bottom:8px}
+.warn li{font-size:14px;color:#4a5462;line-height:1.75;list-style:none;padding-left:17px;position:relative;font-weight:600}
+.warn li::before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--rd)}
+.warn li b{color:var(--rd)}
+
+/* 특장점 */
+.mer{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.mer{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.mer{grid-template-columns:1fr}}
+.mc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:var(--sh)}
+.mc .ic{font-size:26px;line-height:1}
+.mc h4{font-size:16.5px;font-weight:900;letter-spacing:-.035em;margin:10px 0 7px}
+.mc p{font-size:13.6px;color:#4a5462;line-height:1.68}
+.mc .tg{display:inline-block;margin-top:11px;font-size:11.5px;font-weight:800;color:var(--or-dk);
+  background:var(--tint);border-radius:7px;padding:4px 9px}
+
+/* 갤러리 */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.gal figure{border-radius:13px;overflow:hidden;aspect-ratio:4/3;background:#f2f4f7}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.07)}
+.galtab{display:flex;gap:8px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+.galtab button{border:1.5px solid var(--line);background:#fff;border-radius:999px;
+  padding:9px 18px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;
+  letter-spacing:-.02em;transition:all .15s}
+.galtab button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* 정부지원 */
+.gov{background:linear-gradient(135deg,#eff7ff,#fff)}
+.gv{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:0 auto}
+@media(max-width:700px){.gv{grid-template-columns:1fr}}
+.gv-c{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--sh)}
+.gv-c .k{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--bl)}
+.gv-c h4{font-size:19px;font-weight:900;margin:5px 0 4px;letter-spacing:-.035em}
+.gv-c .s{font-size:13.5px;color:var(--mute);font-weight:600}
+.gv-c dl{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;margin-top:16px;
+  padding-top:14px;border-top:1px dashed var(--line)}
+.gv-c dt{font-size:13px;color:var(--mute);font-weight:700}
+.gv-c dd{font-size:14px;font-weight:800;text-align:right}
+.gv-c dd.hi{color:var(--bl);font-weight:900}
+.gv-note{max-width:860px;margin:18px auto 0;text-align:center;font-size:13.5px;color:var(--mute);line-height:1.8}
+.gv-note b{color:var(--ink)}
+.flow{max-width:860px;margin:26px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+@media(max-width:700px){.flow{grid-template-columns:repeat(2,1fr)}}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center}
+.flow .n{font-size:11px;font-weight:900;color:var(--or);letter-spacing:.1em}
+.flow .t{font-size:13.4px;font-weight:800;margin-top:4px;letter-spacing:-.03em}
+.flow .d{font-size:11.6px;color:var(--mute);font-weight:600;margin-top:2px;line-height:1.5}
+
+/* FAQ */
+.faq{max-width:840px;margin:0 auto}
+.fq{border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden;background:#fff}
+.fq summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-weight:800;
+  font-size:16px;position:relative;letter-spacing:-.025em}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
+  font-size:24px;font-weight:400;color:var(--or);transition:transform .2s}
+.fq[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.fq[open] summary{background:#f5fbff}
+.fq .a{padding:16px 20px 20px;color:#4a5462;font-size:15px;line-height:1.76;border-top:1px solid var(--line)}
+.fq .a b{color:var(--ink);background:var(--tint);padding:1px 4px;border-radius:4px}
+
+/* 폼 */
+.apply{background:linear-gradient(180deg,#f4f7fb,#e9eef5)}
+.fm{max-width:640px;margin:0 auto;background:#fff;border-radius:22px;
+  box-shadow:0 18px 60px rgba(11,18,32,.14);overflow:hidden}
+.fm-hd{background:linear-gradient(135deg,var(--ink),#16283f);color:#fff;padding:28px 28px 24px;text-align:center}
+.fm-hd .k{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--or2)}
+.fm-hd h3{font-size:clamp(21px,4vw,27px);font-weight:900;margin-top:7px;letter-spacing:-.035em}
+.fm-hd p{font-size:14px;color:#9aa6b4;margin-top:8px}
+.fm-bd{padding:26px 28px 30px}
+@media(max-width:520px){.fm-bd{padding:22px 18px 26px}.fm-hd{padding:24px 18px 20px}}
+.fgrp{margin-bottom:17px}
+.fgrp>label.lb{display:block;font-size:13.5px;font-weight:800;margin-bottom:7px;letter-spacing:-.02em}
+.req{color:var(--rd);margin-left:2px}
+.hint{font-size:12.5px;color:var(--mute);font-weight:600;margin-left:6px}
+input[type=text],input[type=tel],input[type=email],input[type=number],select,textarea{width:100%;
+  border:1.5px solid var(--line);border-radius:11px;padding:14px 15px;font-size:15.5px;font-family:inherit;
+  background:#fbfcfd;transition:border-color .15s,background .15s;letter-spacing:-.02em}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--or);background:#fff}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+@media(max-width:440px){.g2{grid-template-columns:1fr}}
+.picks{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+@media(max-width:520px){.picks{grid-template-columns:1fr}}
+.pk{position:relative}
+.pk input{position:absolute;opacity:0;width:0;height:0}
+.pk span{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:12px;
+  padding:13px;font-size:14.4px;font-weight:700;cursor:pointer;background:#fbfcfd;
+  transition:all .15s;letter-spacing:-.025em;line-height:1.3}
+.pk span::before{content:"";width:21px;height:21px;border-radius:50%;border:2px solid #c4ccd6;
+  flex:0 0 auto;background:#fff;transition:all .15s}
+.pk input:checked + span{border-color:var(--or);background:#eff7ff;color:var(--or-dk)}
+.pk input:checked + span::before{background:var(--or);border-color:var(--or);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5l3 3 6-7' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size:14px;background-position:center;background-repeat:no-repeat}
+.agree{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:#5b6472;
+  margin:4px 0 16px;line-height:1.6}
+.agree input{width:18px;height:18px;margin-top:2px;accent-color:var(--or);flex:0 0 auto}
+.fnote{text-align:center;font-size:12.5px;color:var(--mute);margin-top:12px}
+.msg{margin-top:13px;padding:13px 15px;border-radius:11px;font-size:14.5px;font-weight:700;display:none}
+.msg.ok{display:block;background:#e7f7ef;color:#0b7a4f;border:1px solid #9fe0c3}
+.msg.err{display:block;background:#fdecec;color:#c42b2b;border:1px solid #f5bcbc}
+
+/* 푸터 / 스티키 */
+footer{background:var(--ink);color:#8b95a3;padding:44px 0 28px;font-size:13.4px;line-height:1.85}
+footer .lg{font-size:19px;font-weight:900;color:#fff;letter-spacing:-.04em;margin-bottom:10px}
+footer .lg span{color:var(--or)}
+footer a{color:#c9d1dc}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  display:grid;grid-template-columns:1fr 1.25fr;gap:8px;box-shadow:0 -4px 20px rgba(0,0,0,.07)}
+.sticky .btn{padding:14px 10px;font-size:15.5px;border-radius:11px}
+.sticky .tel{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+@media(min-width:900px){.sticky{max-width:420px;left:auto;right:22px;bottom:22px;border-radius:16px;
+  border:1px solid var(--line);padding:10px}}
+
+.fadein{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.fadein.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fadein{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar"><div class="in">
+  <div class="lg" id="tbLogo">주영<span>산업</span></div>
+  <div class="sp"></div>
+  <a class="tb-btn g" id="tbTel" href="tel:">전화 상담</a>
+  <a class="tb-btn o" href="#apply" data-cta="topbar">지원금 조회</a>
+</div></div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <img class="hbg" src="images/hero.jpg" alt="" aria-hidden="true" />
+  <div class="wrap">
+    <div class="h-badge"><b>2026 클린사업</b> 지원품목 · 신청서류 전액 대행</div>
+    <h1>공장이 더워서<br>사람이 <em>안 버팁니다</em></h1>
+    <p class="sub">실외기도, 벽 타공도, 배관공사도 없습니다.<br>
+      <b>220V 콘센트에 플러그만 꽂으면</b> 작업자 바로 앞이 시원해집니다.
+      <b>정부지원 70%</b>로 들여놓으세요.</p>
+
+    <div class="h-money">
+      <div class="k">정부지원 70% 적용 시 자부담</div>
+      <div class="v">369,000원<small>부터</small></div>
+      <div class="x">WPC-4900P 기준 · 판매가 1,228,000원 → 보조금 859,000원</div>
+    </div>
+
+    <div class="h-cta">
+      <a class="btn btn-pri" href="#apply" data-cta="hero">내 지원금 무료로 조회</a>
+      <a class="btn btn-gho" id="heroTel" href="tel:">📞 바로 전화상담</a>
+    </div>
+
+    <div class="h-chips">
+      <span class="chip">설치공사 <b>없음</b></span>
+      <span class="chip">정부지원 <b>70%</b> (우대 80~90%)</span>
+      <span class="chip">사업자등록증 <b>1장</b>이면 조회</span>
+      <span class="chip">신청 · 서류 <b>전액 대행</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="band"><div class="in">
+  <div class="c"><div class="n">자부담 36.9만원~</div><div class="l">정부지원 70% 적용 시</div></div>
+  <div class="c"><div class="n">220V 플러그인</div><div class="l">전기·배관공사 ZERO</div></div>
+  <div class="c"><div class="n">4,700 ~ 10,600W</div><div class="l">4가지 모델 냉방능력</div></div>
+  <div class="c"><div class="n">15 ~ 30평</div><div class="l">1대 커버 면적</div></div>
+</div></div>
+
+<!-- ================= 모델 라인업 ================= -->
+<section id="lineup">
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">LINEUP</span>
+      <h2><em>2026년 지원 가능</em> 모델 4종</h2>
+      <p>냉방이 필요한 구역 면적으로 고르세요. 판매가 · 보조금 · 자부담금을 모두 공개합니다.</p>
+    </div>
+    <div class="lineup fadein" id="lineGrid"></div>
+    <div class="cnote" style="color:var(--mute);margin-top:20px">
+      ※ <b style="color:var(--rd)">WPC-1700은 2026년 지원 대상에서 제외</b>되어 안내하지 않습니다.
+      위 4개 모델만 신청이 가능합니다.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 계산기 ================= -->
+<section class="calc" id="calc">
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">ESTIMATE</span>
+      <h2>우리는 <em>얼마만 내면 되나요?</em></h2>
+      <p>모델과 수량만 고르면 자부담금이 바로 나옵니다.</p>
+    </div>
+
+    <div class="cbox fadein">
+      <div class="cfield">
+        <div class="lb"><span>모델 선택</span><b id="mVal">WPC-6900P</b></div>
+        <div class="mmsel" id="mmSel"></div>
+        <div class="cnote" style="margin-top:9px;text-align:left" id="mSpec">-</div>
+      </div>
+
+      <div class="cfield">
+        <div class="lb"><span>필요 수량</span><b id="qVal">1대</b></div>
+        <input type="range" id="qRange" min="1" max="20" step="1" value="1" />
+      </div>
+
+      <div class="cout">
+        <div><div class="k">판매가 합계 (공급가액)</div><div class="v" id="oTot">-</div></div>
+        <div class="gov"><div class="k">정부지원 70% 보조금</div><div class="v" id="oGov">-</div></div>
+        <div class="main"><div class="k">실제 자부담금</div><div class="v" id="oSelf">-</div></div>
+        <div><div class="k">부가세 10% (별도)</div><div class="v" id="oVat">-</div></div>
+      </div>
+
+      <div class="cnote">※ 보조금은 <b style="color:#fff">공단 인정가 × 70%</b> 기준이며, 소상공인·우대 대상은
+        <b style="color:#fff">80~90%</b>까지 올라갑니다.<br>
+        실제 지원율·한도는 사업 공고와 심사 결과에 따라 달라지므로 <b style="color:#fff">무료 조회로 확인</b>해 드립니다.</div>
+
+      <a class="btn btn-pri btn-lg" href="#apply" data-cta="calc" style="margin-top:20px">이 조건으로 지원금 조회하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 가격표 ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">PRICE</span>
+      <h2>모델별 <em>판매가 · 보조금 · 자부담</em></h2>
+      <p>공급가액 기준입니다. 부가세는 별도이며 세금계산서는 의무 발행됩니다.</p>
+    </div>
+    <div class="ptab fadein">
+      <table>
+        <thead><tr><th>모델</th><th>냉방능력</th><th>사용면적</th>
+          <th>판매가</th><th>보조금 70%</th><th>자부담금</th></tr></thead>
+        <tbody id="priceBody"></tbody>
+      </table>
+    </div>
+    <div class="warn fadein">
+      <div class="t">⚠ 신청 전 반드시 확인해 주세요</div>
+      <ul>
+        <li><b>WPC-1700은 2026년 지원불가</b>입니다. WPC-4900P / 5900P / 6900P / 9000 만 신청 가능합니다.</li>
+        <li><b>WPC-9000은 설치비 100,000원이 별도</b>로 발생합니다 (나머지 모델은 플러그인으로 설치비 없음).</li>
+        <li>모든 금액은 <b>공급가액 기준이며 부가세는 별도</b>입니다.</li>
+        <li>보조금은 <b>공단 인정가 기준</b>으로 산정되며, 지원율·한도는 심사 결과에 따라 달라질 수 있습니다.</li>
+        <li><b>상시로 물을 쓰는 환경·실외</b>에서는 성능이 제한될 수 있습니다. 현장 조건을 먼저 알려주세요.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 특장점 ================= -->
+<section style="background:var(--bg2)" id="merit">
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">WHY</span>
+      <h2>왜 <em>이동식</em>이어야 할까요</h2>
+      <p>천장형·벽걸이형을 달 수 없는 공장 환경에 맞춘 장비입니다.</p>
+    </div>
+    <div class="mer fadein" id="merGrid"></div>
+  </div>
+</section>
+
+<!-- ================= 갤러리 ================= -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">GALLERY</span>
+      <h2>주영산업 <em>실제 납품 · 설치 현장</em></h2>
+      <p>전국 사업장에 직접 납품하고 사용법까지 안내드립니다.</p>
+    </div>
+    <div class="galtab fadein" id="galTab"></div>
+    <div class="gal fadein" id="galGrid"></div>
+  </div>
+</section>
+
+<!-- ================= 제원표 ================= -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">SPEC</span>
+      <h2>모델별 <em>상세 제원</em></h2>
+      <p>전원은 전 모델 공통 220V 60Hz 플러그타입(돼지코)입니다.</p>
+    </div>
+    <div class="ptab fadein" id="specTab"></div>
+  </div>
+</section>
+
+<!-- ================= 정부지원 ================= -->
+<section class="gov" id="support">
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">SUPPORT</span>
+      <h2>정부지원사업으로 <em>도입하세요</em></h2>
+      <p>신청서류 작성부터 납품까지 풀패키지로 대행합니다.</p>
+    </div>
+    <div class="gv fadein">
+      <div class="gv-c">
+        <div class="k">PROGRAM 01 · KOSHA</div>
+        <h4>2026 클린사업</h4>
+        <div class="s">안전보건공단 작업환경개선 지원사업</div>
+        <dl>
+          <dt>지원율</dt><dd class="hi">70% (우대 80~90%)</dd>
+          <dt>지원품목</dt><dd>이동식에어컨 포함</dd>
+          <dt>신청시기</dt><dd>상시 (예산 소진 시 마감)</dd>
+        </dl>
+      </div>
+      <div class="gv-c">
+        <div class="k">PROGRAM 02 · GYEONGGI</div>
+        <h4>2026 경기도 작업환경개선사업</h4>
+        <div class="s">경기도 제조업 사업장 대상</div>
+        <dl>
+          <dt>지원율</dt><dd class="hi">80%</dd>
+          <dt>대상</dt><dd>경기도 제조업</dd>
+          <dt>신청시기</dt><dd>8월 (예정)</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flow fadein">
+      <div><div class="n">STEP 01</div><div class="t">무료 조회</div><div class="d">사업자등록증 1장</div></div>
+      <div><div class="n">STEP 02</div><div class="t">서류 대행</div><div class="d">신청서 작성·접수</div></div>
+      <div><div class="n">STEP 03</div><div class="t">공단 심사</div><div class="d">승인 통보</div></div>
+      <div><div class="n">STEP 04</div><div class="t">납품 · 설치</div><div class="d">통상 1~2주</div></div>
+      <div><div class="n">STEP 05</div><div class="t">보조금 정산</div><div class="d">자부담금만 납부</div></div>
+    </div>
+
+    <div class="gv-note fadein"><b>사업자등록증 1장만 보내주세요.</b><br>
+      신청 가능 여부 · 예상 보조금 · 자부담금을 무료로 검토해 드립니다.<br>
+      필요서류(사업자등록증 · 소상공인확인서 · 납세증명서 · 4대보험 가입자명부 · 재무제표)는 저희가 안내 · 대행합니다.</div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head fadein">
+      <span class="eyebrow">FAQ</span>
+      <h2>자주 묻는 질문</h2>
+    </div>
+    <div class="faq fadein" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ================= 신청 ================= -->
+<section class="apply" id="apply">
+  <div class="wrap">
+    <div class="fm fadein">
+      <div class="fm-hd">
+        <div class="k">FREE CHECK</div>
+        <h3>지원금 무료 조회 신청</h3>
+        <p>조회 · 상담 · 서류 대행 전부 무료입니다. 영업일 1일 이내 연락드립니다.</p>
+      </div>
+      <div class="fm-bd">
+        <form id="leadForm" autocomplete="on" novalidate>
+
+          <div class="fgrp">
+            <label class="lb">관심 모델<span class="req">*</span>
+              <span class="hint">모르면 "상담 후 결정"을 선택하세요</span></label>
+            <div class="picks" id="pickBox"></div>
+          </div>
+
+          <div class="g2">
+            <div class="fgrp">
+              <label class="lb">필요 수량 <span class="hint">대</span></label>
+              <input type="number" name="qty" inputmode="numeric" min="1" placeholder="예) 2" />
+            </div>
+            <div class="fgrp">
+              <label class="lb">냉방 필요 면적 <span class="hint">평</span></label>
+              <input type="number" name="area" inputmode="numeric" min="0" placeholder="예) 20" />
+            </div>
+          </div>
+
+          <div class="fgrp">
+            <label class="lb">설치 환경</label>
+            <select name="usage">
+              <option value="">선택해 주세요</option>
+              <option>일반 제조공장 작업장</option><option>용접 · 열가공 등 고열 공정</option>
+              <option>식품 제조 · 포장</option><option>물류창고 · 적재구역</option>
+              <option>정비 · 세차 · 주유소</option><option>사무실 · 휴게공간</option>
+              <option>기타</option>
+            </select>
+          </div>
+
+          <div class="fgrp">
+            <label class="lb">업체명<span class="req">*</span></label>
+            <input type="text" name="company" placeholder="예) 주영산업" required />
+          </div>
+
+          <div class="g2">
+            <div class="fgrp">
+              <label class="lb">담당자 성함<span class="req">*</span></label>
+              <input type="text" name="manager" placeholder="예) 홍길동" required />
+            </div>
+            <div class="fgrp">
+              <label class="lb">직책</label>
+              <input type="text" name="position" placeholder="예) 시설팀장" />
+            </div>
+          </div>
+
+          <div class="g2">
+            <div class="fgrp">
+              <label class="lb">연락처<span class="req">*</span></label>
+              <input type="tel" name="phone" inputmode="numeric" placeholder="010-1234-5678" required />
+            </div>
+            <div class="fgrp">
+              <label class="lb">상시근로자 수</label>
+              <select name="headcount">
+                <option value="">선택해 주세요</option>
+                <option>5인 미만</option><option>5 ~ 9인</option>
+                <option>10 ~ 29인</option><option>30 ~ 49인</option><option>50인 이상</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fgrp">
+            <label class="lb">이메일 <span class="hint">선택 · 견적서 받으실 주소</span></label>
+            <input type="email" name="email" inputmode="email" autocomplete="email"
+                   placeholder="예) manager@company.co.kr" />
+          </div>
+
+          <div class="fgrp">
+            <label class="lb">사업장 주소<span class="req">*</span></label>
+            <input type="text" name="address" placeholder="예) 경기도 화성시 ○○읍 ○○로" required />
+          </div>
+
+          <div class="fgrp">
+            <label class="lb">문의 내용 <span class="hint">선택</span></label>
+            <textarea name="memo" rows="2" placeholder="예) 용접 작업장 20평 정도인데 작업자 3명이 너무 더워합니다. 몇 대가 필요한지 모르겠어요."></textarea>
+          </div>
+
+          <label class="agree">
+            <input type="checkbox" name="agree" required />
+            <span>개인정보 수집·이용에 동의합니다. (수집항목: 업체명·담당자·연락처·이메일·주소 / 목적: 이동식에어컨 정부지원 상담 및 견적 발송 / 보유: 상담 종료 후 1년)</span>
+          </label>
+
+          <button type="submit" class="btn btn-pri btn-lg" id="submitBtn">무료로 지원금 조회하기</button>
+          <div class="fnote">제출 후 영업일 기준 1일 이내에 연락드립니다.</div>
+          <div class="msg" id="formMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="lg" id="ftLogo">주영<span>산업</span></div>
+    <div id="ftInfo"></div>
+    <div style="margin-top:14px;font-size:12.4px;color:#6b7684">
+      ※ 모든 금액은 공급가액 기준이며 부가세는 별도입니다. 세금계산서는 의무 발행됩니다.<br>
+      ※ 보조금은 공단 인정가 기준으로 산정되며, 지원 대상·비율·한도는 각 사업 공고 및 심사 결과에 따라 달라질 수 있습니다.<br>
+      ※ WPC-1700은 2026년 지원 대상에서 제외되었습니다. WPC-9000은 설치비 100,000원이 별도입니다.
+    </div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn tel" id="stTel" href="tel:">📞 전화</a>
+  <a class="btn btn-pri" href="#apply" data-cta="sticky">지원금 무료조회</a>
+</div>
+
+<!-- ====================================================================== -->
+<!--  [2] 동작 스크립트                                                       -->
+<!-- ====================================================================== -->
+<script>
+(function(){
+  const $  = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const won = n => Math.round(n).toLocaleString('ko-KR') + '원';
+  const man = n => (n>=10000 ? Math.round(n/10000).toLocaleString('ko-KR')+'만원' : won(n));
+
+  /* ---- 연락처 ---- */
+  const tel = 'tel:' + CFG.phone.replace(/[^0-9]/g,'');
+  ['#heroTel','#stTel','#tbTel'].forEach(s=>{ const e=$(s); if(e) e.href = tel; });
+  [$('#tbLogo'),$('#ftLogo')].forEach(e=>{ e.innerHTML = CFG.brand.slice(0,2)+'<span>'+CFG.brand.slice(2)+'</span>'; });
+  $('#ftInfo').innerHTML =
+    CFG.bizName + ' · 담당 ' + CFG.contact + '<br>' +
+    '상담문의 <a href="'+tel+'"><b>'+CFG.phone+'</b></a> (24시간 통화 가능)<br>' +
+    '&copy; ' + new Date().getFullYear() + ' ' + CFG.brand + '. All rights reserved.';
+
+  /* ---- 모델 라인업 ---- */
+  $('#lineGrid').innerHTML = CFG.models.map(m=>`
+    <article class="lc${m.best?' best':''}">
+      ${m.best?'<span class="bst">BEST</span>':''}
+      <div class="ph"><img class="${m.fit}" src="images/${m.img}" alt="${m.key} 산업용 이동식에어컨" loading="lazy"></div>
+      ${m.fit==='cover'?'<div class="imgnote">※ WPC-9000 실제 설치 현장 사진</div>':''}
+      <div class="bd">
+        <div class="mm">${m.key}</div>
+        <div class="ty">${m.ducts}</div>
+        <div class="tl">${m.tagline}</div>
+        <dl class="kv">
+          <dt>냉방능력</dt><dd>${m.cool}</dd>
+          <dt>사용면적</dt><dd>${m.area}</dd>
+          <dt>소비전력</dt><dd>${m.watt}</dd>
+          <dt>에너지효율</dt><dd>${m.grade}</dd>
+        </dl>
+        <div class="money">
+          <div class="r"><span>판매가</span><b>${m.price.toLocaleString('ko-KR')}원</b></div>
+          <div class="r st"><span>정부지원 70%</span><b>− ${m.gov.toLocaleString('ko-KR')}원</b></div>
+          <div class="sf"><span>실제 자부담</span><b>${m.self.toLocaleString('ko-KR')}원</b></div>
+          ${m.install?`<div class="iv">＋ 설치비 ${m.install.toLocaleString('ko-KR')}원 별도</div>`:''}
+        </div>
+        <ul>${m.good.map(g=>`<li>${g}</li>`).join('')}</ul>
+        <div class="us"><b>권장 사용처</b>${m.use.join('<br>')}</div>
+        <div class="pick"><b class="js-pick" data-key="${m.key}">＋ 이 모델로 지원금 조회</b></div>
+      </div>
+    </article>`).join('');
+
+  /* ---- 가격표 ---- */
+  $('#priceBody').innerHTML = CFG.models.map(m=>`
+    <tr${m.best?' class="best"':''}>
+      <td class="mm">${m.key}${m.best?' ★':''}</td>
+      <td class="sm">${m.cool}</td>
+      <td class="sm">${m.area}</td>
+      <td class="pr">${m.price.toLocaleString('ko-KR')}원</td>
+      <td class="gv">${m.gov.toLocaleString('ko-KR')}원</td>
+      <td class="sf">${m.self.toLocaleString('ko-KR')}원${m.install?'<br><small style="color:#e03131;font-size:11px">+설치비 10만</small>':''}</td>
+    </tr>`).join('');
+
+  /* ---- 제원표 ---- */
+  const ROWS = [
+    ['토출구',    m=>m.ducts],
+    ['냉방능력',  m=>m.cool],
+    ['소비전력',  m=>m.watt],
+    ['정격전류',  m=>m.amp],
+    ['사용면적',  m=>m.area],
+    ['에너지효율',m=>m.grade],
+    ['응축수통',  m=>m.tank],
+    ['제품중량',  m=>m.weight],
+    ['제품규격',  m=>m.size],
+    ['냉매',      ()=>'R-410A'],
+    ['전원',      ()=>'220V 60Hz 플러그']
+  ];
+  $('#specTab').innerHTML = '<table><thead><tr><th class="rh">구분</th>' +
+    CFG.models.map(m=>`<th>${m.key}</th>`).join('') + '</tr></thead><tbody>' +
+    ROWS.map(([k,f])=>`<tr><th class="rh">${k}</th>` +
+      CFG.models.map(m=>`<td class="rv">${f(m)}</td>`).join('') + '</tr>').join('') +
+    '</tbody></table>';
+
+  /* ---- 계산기 ---- */
+  const qr = $('#qRange'); let mi = 2;                 // 기본 WPC-6900P
+  $('#mmSel').innerHTML = CFG.models.map((m,i)=>`
+    <button type="button"${i===mi?' class="on"':''}>${m.key.replace('WPC-','')}<small>${m.area.split(' ')[0]}</small></button>`).join('');
+  function calc(){
+    const m = CFG.models[mi], q = +qr.value;
+    const tot = m.price*q + m.install*q;
+    const gov = m.gov*q;
+    $('#mVal').textContent  = m.key;
+    $('#qVal').textContent  = q + '대';
+    $('#mSpec').textContent = m.cool + ' · ' + m.area + ' · 소비전력 ' + m.watt
+                            + (m.install ? ' · 설치비 ' + m.install.toLocaleString('ko-KR') + '원/대 별도' : ' · 설치비 없음');
+    $('#oTot').textContent  = man(tot);
+    $('#oGov').textContent  = '− ' + man(gov);
+    $('#oSelf').textContent = man(tot - gov);
+    $('#oVat').textContent  = man(tot*0.1);
+  }
+  qr.addEventListener('input',calc);
+  $$('#mmSel button').forEach((b,i)=>b.addEventListener('click',()=>{
+    $$('#mmSel button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); mi=i; calc();
+    const r = boxes.find(x=>x.dataset.key===CFG.models[i].key); if(r) r.checked = true;
+  }));
+
+  /* ---- 특장점 ---- */
+  $('#merGrid').innerHTML = CFG.merits.map(([ic,t,d,tg])=>`
+    <article class="mc"><div class="ic">${ic}</div><h4>${t}</h4><p>${d}</p>
+      <span class="tg">${tg}</span></article>`).join('');
+
+  /* ---- 모델 선택 라디오 ---- */
+  const OPTS = CFG.models.map(m=>({key:m.key, label:m.key+' — '+m.area}))
+                         .concat([{key:'상담 후 결정', label:'상담 후 결정 (추천받기)'}]);
+  $('#pickBox').innerHTML = OPTS.map((o,i)=>`
+    <label class="pk">
+      <input type="radio" name="model" value="${o.key}" data-key="${o.key}"${i===OPTS.length-1?' checked':''}>
+      <span>${o.label}</span>
+    </label>`).join('');
+  const boxes = $$('#pickBox input[name=model]');
+  calc();
+
+  $$('.js-pick').forEach(el=>{
+    el.addEventListener('click',e=>{
+      const b = boxes.find(x=>x.dataset.key===el.dataset.key);
+      if(b) b.checked = true;
+      if(window.fbq) fbq('trackCustom','PickItem',{item:el.dataset.key});
+      e.preventDefault();
+      document.getElementById('apply').scrollIntoView({behavior:'smooth'});
+      const t=el.textContent; el.textContent='✔ 신청서에 담겼습니다';
+      setTimeout(()=>{el.textContent=t;},2600);
+    });
+  });
+
+  /* ---- 갤러리 ---- */
+  const GAL = {
+    '설치 현장':   ['gal1.jpg','gal2.jpg','gal3.jpg','gal5.jpg','gal6.jpg','gal7.jpg'],
+    '납품 · 출고': ['gal4.jpg','gal9.jpg','gal10.jpg','gal11.jpg','gal12.jpg','hero.jpg'],
+    '가동 중':     ['gal8.jpg','gal2.jpg','gal6.jpg','gal1.jpg','gal7.jpg','gal3.jpg']
+  };
+  const keys = Object.keys(GAL);
+  $('#galTab').innerHTML = keys.map((k,i)=>`<button type="button"${i===0?' class="on"':''}>${k}</button>`).join('');
+  function drawGal(k){
+    $('#galGrid').innerHTML = GAL[k].map(f=>`
+      <figure><img src="images/${f}" alt="이동식에어컨 ${k}" loading="lazy"
+        onerror="this.closest('figure').remove()"></figure>`).join('');
+  }
+  drawGal(keys[0]);
+  $$('#galTab button').forEach((b,i)=>b.addEventListener('click',()=>{
+    $$('#galTab button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); drawGal(keys[i]);
+  }));
+
+  /* ---- FAQ ---- */
+  $('#faqList').innerHTML = CFG.faq.map(([q,a],i)=>`
+    <details class="fq"${i===0?' open':''}><summary>${q}</summary><div class="a">${a}</div></details>`).join('');
+
+  /* ---- 상단바 / 등장 ---- */
+  const tb=$('#topbar');
+  addEventListener('scroll',()=>{ tb.classList.toggle('show', scrollY>520); },{passive:true});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  }),{threshold:.08});
+  $$('.fadein').forEach(e=>io.observe(e));
+
+  /* ---- CTA 추적 ---- */
+  $$('[data-cta]').forEach(el=>el.addEventListener('click',()=>{
+    if(window.fbq) fbq('trackCustom','ClickApply',{from:el.dataset.cta});
+  }));
+  $$('a[href^="tel:"]').forEach(el=>el.addEventListener('click',()=>{
+    if(window.fbq) fbq('trackCustom','ClickCall');
+    if(window.gtag && TRACK.googleAdsId) gtag('event','click_call');
+  }));
+
+  /* ---- 폼 ---- */
+  const form=$('#leadForm'), msg=$('#formMsg'), btn=$('#submitBtn');
+  form.phone.addEventListener('input',e=>{
+    let x=e.target.value.replace(/[^0-9]/g,'').slice(0,11);
+    if(x.length>3&&x.length<=7) x=x.replace(/(\d{3})(\d+)/,'$1-$2');
+    else if(x.length>7)         x=x.replace(/(\d{3})(\d{4})(\d+)/,'$1-$2-$3');
+    e.target.value=x;
+  });
+  function show(t,k){ msg.textContent=t; msg.className='msg '+k;
+    msg.scrollIntoView({behavior:'smooth',block:'center'}); }
+
+  form.addEventListener('submit', async e=>{
+    e.preventDefault();
+    const model = (boxes.find(b=>b.checked)||{}).value || '상담 후 결정';
+    if(!form.company.value.trim()) return show('업체명을 입력해 주세요.','err');
+    if(!form.manager.value.trim()) return show('담당자 성함을 입력해 주세요.','err');
+    if(form.phone.value.replace(/[^0-9]/g,'').length<9)
+                                   return show('연락처를 정확히 입력해 주세요.','err');
+    if(!form.address.value.trim()) return show('사업장 주소를 입력해 주세요.','err');
+    const em = form.email.value.trim();
+    if(em && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))
+                                   return show('이메일 주소를 정확히 입력해 주세요.','err');
+    if(!form.agree.checked)        return show('개인정보 수집·이용 동의가 필요합니다.','err');
+
+    btn.disabled=true; btn.textContent='전송 중...';
+    const memo = form.memo.value.trim();
+    const hc   = form.headcount.value;
+    const qty  = form.qty.value.trim();
+    const area = form.area.value.trim();
+    const use  = form.usage.value;
+    // 백엔드가 8칸만 기록하므로 유입경로 칸에 부가정보를 같이 실어 보냄
+    const trail = [location.href,
+                   '관심모델: ' + model,
+                   qty  ? '수량: '       + qty + '대' : '',
+                   area ? '면적: '       + area + '평' : '',
+                   use  ? '설치환경: '   + use  : '',
+                   hc   ? '상시근로자: ' + hc   : '',
+                   em   ? '이메일: '     + em   : '',
+                   memo ? '메모: '       + memo : ''].filter(Boolean).join(' | ');
+    const data = {
+      program:'이동식에어컨',
+      item:'에어컨',                            // ★ 시트 탭 라우팅 키 (고정값)
+      pickedItems: '이동식에어컨 ' + model, model: model,
+      qty: qty, area: area, usage: use,
+      company:form.company.value.trim(), manager:form.manager.value.trim(),
+      position:form.position.value.trim(), phone:form.phone.value.trim(),
+      email: em, headcount: hc, address:form.address.value.trim(),
+      memo: memo, pageUrl: trail, landingUrl: location.href,
+      submittedAt:new Date().toISOString()
+    };
+    try{
+      if(ENDPOINT && !ENDPOINT.startsWith('PASTE')){
+        await fetch(ENDPOINT,{method:'POST',mode:'no-cors',
+          headers:{'Content-Type':'application/x-www-form-urlencoded'},
+          body:new URLSearchParams(data).toString()});
+      }
+      if(window.fbq) fbq('track','Lead',{content_name:'이동식에어컨 '+model});
+      if(window.gtag && TRACK.googleAdsId && TRACK.gadsConversionLabel){
+        gtag('event','conversion',{send_to:TRACK.googleAdsId+'/'+TRACK.gadsConversionLabel,value:1,currency:'KRW'});
+      }
+      form.reset();
+      boxes[boxes.length-1].checked = true;
+      show('신청이 접수되었습니다. 빠르게 연락드리겠습니다!','ok');
+    }catch(err){
+      show('전송 중 오류가 발생했습니다. '+CFG.phone+' 로 전화 주세요.','err');
+    }finally{
+      btn.disabled=false; btn.textContent='무료로 지원금 조회하기';
+    }
+  });
+})();
+</script>
+
+<!-- ====================================================================== -->
+<!--  [3] 광고 픽셀                                                          -->
+<!-- ====================================================================== -->
+<script>
+(function(){
+  if(TRACK.metaPixel){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',TRACK.metaPixel); fbq('track','PageView');
+  }
+  const gid = TRACK.googleAdsId || TRACK.ga4Id;
+  if(gid){
+    const s=document.createElement('script'); s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+gid; document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments)};
+    gtag('js',new Date());
+    if(TRACK.ga4Id)       gtag('config',TRACK.ga4Id);
+    if(TRACK.googleAdsId) gtag('config',TRACK.googleAdsId);
+  }
+})();
+</script>
+</body>
+</html>
