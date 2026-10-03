@@ -26,7 +26,7 @@ const CFG = {
 
   // 2027년 지원 가능 모델 (WPC-1700 은 지원불가 → 제외)
   models: [
-    { key:"WPC-4900P", img:"wpc4900.jpg", fit:"contain", ducts:"2구 (기본형)",
+    { key:"WPC-4900P", img:"wpc4900_v2.jpg", fit:"contain", ducts:"2구 (기본형)",
       cool:"4,700W", watt:"2.3kW", amp:"11.0A", area:"50㎡ (약 15평)",
       grade:"5등급", tank:"18L", weight:"89kg", size:"523 × 670 × 1,042mm",
       price:1228000, gov:859000, self:369000, install:0,
@@ -34,7 +34,7 @@ const CFG = {
       good:["가장 가벼운 89kg · 혼자서도 이동","소비전력 2.3kW로 전기요금 부담 최소"],
       use:["소규모 공장·창고 작업대 주변","용접·연마 등 1~2인 고정 작업구역"] },
 
-    { key:"WPC-5900P", img:"wpc5900.jpg", fit:"contain", ducts:"3구 (중형)",
+    { key:"WPC-5900P", img:"wpc5900_v2.jpg", fit:"contain", ducts:"3구 (중형)",
       cool:"6,500W", watt:"2.5kW", amp:"11.39A", area:"62㎡ (약 19평)",
       grade:"4등급", tank:"18L", weight:"94kg", size:"562 × 750 × 1,200mm",
       price:1488000, gov:1041000, self:447000, install:0,
@@ -42,7 +42,7 @@ const CFG = {
       good:["토출구 3구로 작업자 여러 명 동시 커버","6,500W 냉방능력 대비 소비전력 2.5kW"],
       use:["중형 생산라인, 포장·검사 구역","작업자 2~4명이 모여 있는 공정"] },
 
-    { key:"WPC-6900P", img:"wpc6900.jpg", fit:"contain", ducts:"3구 (대형)", best:true,
+    { key:"WPC-6900P", img:"wpc6900_v2.jpg", fit:"contain", ducts:"3구 (대형)", best:true,
       cool:"7,100W", watt:"2.93kW", amp:"13.41A", area:"66㎡ (약 20평)",
       grade:"5등급", tank:"18L", weight:"102kg", size:"562 × 766 × 1,269mm",
       price:1713000, gov:1199000, self:514000, install:0,
@@ -50,7 +50,7 @@ const CFG = {
       good:["7,100W 고출력 + 에너지효율 5등급","현장에서 가장 만족도 높은 체감 냉방"],
       use:["일반 제조공장 작업장 전반","열원(용광로·프레스) 인접 구역"] },
 
-    { key:"WPC-9000", img:"wpc9000.jpg", fit:"contain", ducts:"대형 터미널형",
+    { key:"WPC-9000", img:"wpc9000_v2.jpg", fit:"contain", ducts:"대형 터미널형",
       cool:"10,600W", watt:"4.9kW", amp:"-", area:"100㎡ (약 30평)",
       grade:"5등급", tank:"상시배수", weight:"-", size:"-",
       price:2559000, gov:1791000, self:768000, install:100000,
@@ -172,7 +172,7 @@ h2 em{font-style:normal;color:var(--or)}
 .h-shots figure.b{outline:2.5px solid var(--or);outline-offset:-2.5px}
 .h-shots .bg{position:absolute;right:0;top:0;z-index:2;background:var(--or);color:#fff;
   font-size:10px;font-weight:900;letter-spacing:.08em;padding:4px 9px;border-bottom-left-radius:9px}
-.h-shots img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block;padding:9px 9px 0;background:#fff}
+.h-shots img{width:100%;aspect-ratio:1/1.18;object-fit:contain;display:block;padding:6px 6px 0;background:#fff}
 .h-shots figcaption{padding:7px 10px 10px;text-align:center;background:#fff}
 .h-shots .nm{font-size:13.5px;font-weight:900;color:#0b1220;letter-spacing:-.04em;line-height:1.15}
 .h-shots .cp{font-size:11.5px;font-weight:800;color:#0a84ff;margin-top:2px}
@@ -230,9 +230,11 @@ h2 em{font-style:normal;color:var(--or)}
 .lc.best{border:2px solid var(--or)}
 .lc .bst{position:absolute;right:0;top:0;background:var(--or);color:#fff;font-size:11px;
   font-weight:900;letter-spacing:.08em;padding:6px 12px;border-bottom-left-radius:10px;z-index:2}
-.lc .ph{aspect-ratio:1/1.08;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
-.lc .ph img{width:100%;height:100%}
-.lc .ph img.contain{object-fit:contain;padding:4px}
+.lc .ph{aspect-ratio:1/1.34;background:#fff;display:block;
+  border-bottom:1px solid var(--line);overflow:hidden}
+.lc .ph img{width:100%;height:100%;display:block}
+.lc .ph img.contain{object-fit:contain;object-position:center;padding:0}
+@media(max-width:470px){.lc .ph{aspect-ratio:1/1;max-height:360px}}
 .lc .ph img.cover{object-fit:cover}
 .lc .bd{padding:18px 18px 0;display:flex;flex-direction:column;flex:1}
 .lc .mm{font-size:22px;font-weight:900;letter-spacing:-.045em;color:var(--ink);line-height:1.1}
@@ -541,7 +543,7 @@ footer a{color:#c9d1dc}
 
 <!-- ================= 모델 라인업 ================= -->
 <section id="lineup">
-  <div class="wrap">
+  <div class="wrap" style="max-width:1320px">
     <div class="sec-head fadein">
       <span class="eyebrow">LINEUP</span>
       <h2><em>2027년 지원 가능</em> 모델 4종</h2>
